@@ -13,7 +13,7 @@
         .bubble-text {
             position: absolute;
             top: 100%;
-            /* Position below the button */
+            /* Position below the button by default */
             left: 50%;
             transform: translateX(-50%);
             background-color: #f9f9f9;
@@ -24,6 +24,17 @@
             z-index: 10;
             text-align: center;
             width: 250px;
+            margin-top: 10px; /* Add some space between button and bubble */
+        }
+
+        /* Media query for smaller screens to position bubble above button */
+        @media (max-width: 576px) {
+            .bubble-text {
+                top: auto; /* Reset top positioning */
+                bottom: 100%; /* Position above the button */
+                margin-top: 0; /* Reset top margin */
+                margin-bottom: 10px; /* Add space between button and bubble */
+            }
         }
 
         .radio-buttons-wrapper {
@@ -312,10 +323,7 @@
                 height: 250px;
             }
 
-            .bubble-text {
-                width: 200px;
-                font-size: 0.9rem;
-            }
+            /* Bubble text adjustments for very small screens - already handled in main bubble styling */
 
             /* Adjust game cards for mobile */
             .game-time-card, .border {
@@ -626,7 +634,7 @@
                             </div>
 
                             <!-- Check Score Button -->
-                            <div class="text-center position-relative">
+                            <div class="text-center position-relative py-4">
                                 <button id="checkScoreBtn" class="btn btn-outline-dark">Check your Score</button>
                                 <!-- Bubble Text -->
                                 <div id="scoreBubble" class="bubble-text d-none">
@@ -692,6 +700,18 @@
 
             // Show the bubble
             scoreBubble.classList.remove('d-none');
+
+            // Ensure the button is visible in viewport when bubble appears
+            const checkScoreBtn = document.getElementById('checkScoreBtn');
+            const rect = checkScoreBtn.getBoundingClientRect();
+
+            // If button is near the bottom of viewport, scroll to make it more centered
+            if (rect.bottom > window.innerHeight - 100) {
+                window.scrollBy({
+                    top: 100,
+                    behavior: 'smooth'
+                });
+            }
 
             // Hide the bubble after 5 seconds
             setTimeout(() => {
