@@ -4,126 +4,103 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Share your favorite piano pieces with Piano Nerds. Submit classical music recommendations and help us expand our musical horizons." />
-    <meta name="keywords" content="piano music, classical piano, music recommendations, piano pieces, share music" />
-    <meta name="author" content="Piano Nerds" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Piano Nerds - Share Your Favorite Piano Pieces" />
-    <meta property="og:description" content="Share your favorite piano pieces and recommendations with our community of piano enthusiasts." />
-    <meta property="og:image" content="media/Screenshot (22) (1).png" />
-    <meta property="og:url" content="https://pianonerds.com/YourSuggestions.html" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://pianonerds.com/YourSuggestions.html" />
-    <title>Piano Nerds - Share Your Favorite Piano Pieces and Recommendations</title>
+    <title>Piano Nerds - Your Suggestions</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/suggestions.css">
-    <link rel="stylesheet" href="styles/dark-theme.css">
-    <!-- Scripts -->
-    <script src="js/translations.js" defer></script>
-    <script src="js/theme-switcher.js" defer></script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Share Your Piano Recommendations",
-      "description": "Share your favorite piano pieces and recommendations with our community of piano enthusiasts.",
-      "url": "https://pianonerds.com/YourSuggestions.html",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Piano Nerds",
-        "url": "https://pianonerds.com"
-      }
-    }
-    </script>
 </head>
 
+
 <body>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
-            <div class="container-fluid">
-                <h1 class="navbar-brand mx-auto navbar-centered-title fw-bold fs-4 m-0" data-translate="title" data-category="nav">
-                    Piano Nerds
-                </h1>
-            </div>
-        </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+        <div class="container-fluid">
+            <span class="navbar-brand mx-auto navbar-centered-title fw-bold fs-4">
+                Piano Nerds
+            </span>
+        </div>
+    </nav>
 
-        <!-- WelcomingBar -->
-        <div class="container-fluid main-section">
-            <!-- Row for top nav links -->
-            <div class="row">
-                <div class="col-auto">
-                    <a href="index.html" class="btn btn-outline-dark me-2 mb-2" data-translate="favorites" data-category="nav">My favorite pieces</a>
-                    <a href="YourSuggestions.html" class="btn btn-dark me-2 mb-2 active disabled" aria-current="page" data-translate="suggestions" data-category="nav">Your suggestions</a>
-                    <a href="GuessTheComposer.html" class="btn btn-outline-dark mb-2" data-translate="game" data-category="nav">Guess the Composer</a>
-                </div>
+    <!-- WelcomingBar -->
+    <div class="container-fluid main-section">
+        <!-- Row for top nav links -->
+        <div class="row">
+            <div class="col-auto">
+                <a href="index.html" class="btn btn-outline-dark me-2 mb-2">My favorite pieces</a>
+                <a href="YourSuggestions.html" class="btn btn-dark me-2 mb-2 active disabled" aria-current="page">Your
+                    suggestions</a>
+                <a href="GuessTheComposer.html" class="btn btn-outline-dark mb-2">Guess the Composer</a>
             </div>
+        </div>
 
-            <!-- Row for center text -->
-            <div class="row justify-content-center text-center mt-4 mt-md-5">
-                <div class="col-12 col-md-10 col-lg-8">
-                    <h2 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3 fs-5"><strong data-translate="welcome" data-category="nav">Welcome to Piano Nerds, a place for all things piano!</strong></h2>
-                    <p class="px-2" data-translate="intro" data-category="nav">
-                        Whether you're a passionate pianist, an eager learner, or just someone who loves the sound of the
-                        keys, this site is for you.
-                        Piano music has the power to inspire, heal, and transport us to different worlds. Here, you'll find
-                        a collection of my favorite pieces,
-                        a space for you to share your own suggestions, and a fun interactive challenge where you can test
-                        your musical ear.
-                    </p>
-                </div>
+        <!-- Row for center text -->
+        <div class="row justify-content-center text-center mt-4 mt-md-5">
+            <div class="col-12 col-md-10 col-lg-8">
+                <h5 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3"><strong>Welcome to Piano Nerds, a place for all
+                        things
+                        piano!</strong></h5>
+                <p class="px-2">
+                    Whether you're a passionate pianist, an eager learner, or just someone who loves the sound of the
+                    keys, this
+                    site is for you.
+                    Piano music has the power to inspire, heal, and transport us to different worlds. Here, you’ll find
+                    a
+                    collection of my favorite pieces,
+                    a space for you to share your own suggestions, and a fun interactive challenge where you can test
+                    your musical
+                    ear.
+                </p>
             </div>
+        </div>
 
-            <!-- Row for bottom quote -->
-            <div class="row">
-                <div class="col">
-                    <blockquote class="quote">
-                        <span data-translate="quote" data-category="nav">"Without music, life would be a mistake"</span>
-                        <cite class="quote-author" data-translate="author" data-category="nav"><br>— Friedrich Nietzsche</cite>
-                    </blockquote>
+        <!-- Row for bottom quote -->
+        <div class="row">
+            <div class="col">
+                <div class="quote">
+                    “Without music, life would be a mistake”
+                    <div class="quote-author">— Friedrich Nietzsche</div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- BackgroundImage -->
-    <img src="media/Screenshot (22) (1).png" alt="Grand piano in a concert hall" class="img-fluid background-img" width="1200" height="800" loading="lazy" />
+    <img src="media/Screenshot (22) (1).png" alt="A piano" class="img-fluid background-img" />
+
+
 
     <!-- Main Content -->
-    <main class="container-fluid overlap">
+    <div class="container-fluid overlap">
         <div class="col-12 col-md-10 offset-0 offset-md-1 main-content">
 
             <!-- Top Section: Greeting and Instructions -->
             <section class="top-section">
-                <h2 data-translate="greeting" data-category="suggestions">Hey fellow musicians,</h2>
-                <p data-translate="instructions" data-category="suggestions">
+                <h2>Hey fellow musicians,</h2>
+                <p>
                     I'm always on the lookout for new pieces of music.<br>
                     Here you can <em>share your favorite ones.</em><br><br>
                     Help me expand my musical horizons!
                 </p>
                 <!-- Responsive image placeholder -->
-                <img src="media/coquette-hampter.gif" alt="Cute animated hamster" class="img-fluid" width="300" height="200" loading="lazy" />
+                <img src="media/coquette-hampter.gif" alt="A piano" class="img-fluid" />
             </section>
 
-            <!-- Form Section -->
-            <section id="content">
+            <!-- Main Content -->
+            <main id="content">
                 <form action="mailto:someone@example.com" method="post" enctype="text/plain">
                     <div class="row">
                         <!-- Left Column: Piece Name and Rating -->
                         <div class="col-12 col-md-5 offset-md-1 form-outline">
                             <div class="mb-3">
-                                <label for="pieceName" class="form-label fw-bold" data-translate="piece_name" data-category="suggestions">Name of the piece:</label>
+                                <label for="pieceName" class="form-label fw-bold">Name of the piece:</label>
                                 <input type="text" class="form-control" id="pieceName" name="pieceName"
-                                    placeholder="Enter piece name" aria-required="true">
+                                    placeholder="Enter piece name">
                             </div>
                             <fieldset class="mb-3">
-                                <legend class="fw-bold" data-translate="rating" data-category="suggestions">Your rating (1 - 5):</legend>
+                                <legend class="fw-bold">Your rating (1 - 5):</legend>
                                 <div class="d-flex flex-wrap">
                                     <div class="form-check me-3">
                                         <input class="form-check-input" type="radio" name="rating" id="rating1"
@@ -133,22 +110,22 @@
                                     <div class="form-check me-3">
                                         <input class="form-check-input" type="radio" name="rating" id="rating2"
                                             value="2">
-                                        <label class="form-check-label" for="rating2">2</label>
+                                        <label class="form-check-label" for="rating1">2</label>
                                     </div>
                                     <div class="form-check me-3">
                                         <input class="form-check-input" type="radio" name="rating" id="rating3"
                                             value="3">
-                                        <label class="form-check-label" for="rating3">3</label>
+                                        <label class="form-check-label" for="rating1">3</label>
                                     </div>
                                     <div class="form-check me-3">
                                         <input class="form-check-input" type="radio" name="rating" id="rating4"
                                             value="4">
-                                        <label class="form-check-label" for="rating4">4</label>
+                                        <label class="form-check-label" for="rating1">4</label>
                                     </div>
                                     <div class="form-check me-3">
                                         <input class="form-check-input" type="radio" name="rating" id="rating5"
                                             value="5">
-                                        <label class="form-check-label" for="rating5">5</label>
+                                        <label class="form-check-label" for="rating1">5</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -157,17 +134,16 @@
                         <!-- Right Column: Relationship Textarea -->
                         <div class="col-12 col-md-5 form-outline mt-4 mt-md-0">
                             <div class="mb-3">
-                                <label for="relationship" class="form-label fw-bold" data-translate="relationship" data-category="suggestions">Your relationship with it:</label>
+                                <label for="relationship" class="form-label fw-bold">Your relationship with it:</label>
                                 <textarea class="form-control" id="relationship" name="relationship" rows="7"
-                                    placeholder="How did you discover it? Why does it matter to you?" data-translate="relationship_placeholder" data-category="suggestions" aria-required="true"></textarea>
+                                    placeholder="How did you discover it? Why does it matter to you?"></textarea>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Extra Fun Checkbox -->
+                    <br <!-- Extra Fun Checkbox -->
                     <div class="mb-3 p-4 mx-auto text-center"
                         style="background-color: #f9f9f9; border: 2px solid #ccc; border-radius: 8px; max-width: 400px;">
-                        <label class="fw-bold d-block mb-3" for="extraFun" style="font-size: 1.2rem; color: #333;" data-translate="extra_fun" data-category="suggestions">
+                        <label class="fw-bold d-block mb-3" for="extraFun" style="font-size: 1.2rem; color: #333;">
                             Check for extra fun <br>
                             <span style="font-style: italic; color: #666;">(nothing will happen)</span>
                         </label>
@@ -179,39 +155,44 @@
 
                     <!-- Form Buttons -->
                     <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mb-4">
-                        <button type="submit" class="btn btn-primary mb-2 mb-md-0" data-translate="submit" data-category="suggestions">Submit</button>
-                        <button type="reset" class="btn btn-secondary" data-translate="reset" data-category="suggestions">Reset</button>
+                        <button type="submit" class="btn btn-primary mb-2 mb-md-0">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
                     </div>
                 </form>
 
                 <!-- Thank You Image Placeholder -->
                 <div class="text-center">
-                    <img src="media/thank.png" alt="Thank you message" class="img-fluid" width="400" height="200" loading="lazy" data-translate="thank_you" data-category="suggestions" />
+                    <img src="media/thank.png" alt="Thank you!" class="img-fluid" />
                 </div>
-            </section>
+            </main>
         </div>
-    </main>
+    </div>
+
+
+
+    </div>
+
 
     <!-- Footer -->
     <footer class="custom-footer">
-        <p style="margin-bottom: 1rem; font-size: 1rem;" data-translate="footer" data-category="nav">
+        <p style="margin-bottom: 1rem; font-size: 1rem;">
             © 2025 Piano Nerds. All rights blibber-blabbered, frobulated, and snickerdoodled.<br>
             Unauthorized flibber-flobbing strictly forbidden under the Galactic Code of Musical Mayhem. 🪐🎵
         </p>
         <div style="margin-top: 1rem;" class="d-flex justify-content-center flex-wrap">
-            <a href="https://github.com/angelmeneg" style="margin: 10px; color: #f1f1f1; text-decoration: none;" aria-label="GitHub Profile">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="28"
-                    height="28" style="filter: invert(1);" />
+            <a href="https://github.com/angelmeneg" style="margin: 10px; color: #f1f1f1; text-decoration: none;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                    width="28" height="28" style="filter: invert(1);" />
             </a>
             <a href="https://www.instagram.com/menegatos_/"
-                style="margin: 10px; color: #f1f1f1; text-decoration: none;" aria-label="Instagram Profile">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" width="28"
-                    height="28" style="filter: invert(1);" />
+                style="margin: 10px; color: #f1f1f1; text-decoration: none;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"
+                    width="28" height="28" style="filter: invert(1);" />
             </a>
             <a href="https://www.youtube.com/@angelmeneg6507"
-                style="margin: 10px; color: #f1f1f1; text-decoration: none;" aria-label="YouTube Channel">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" width="28"
-                    height="28" style="filter: invert(1);" />
+                style="margin: 10px; color: #f1f1f1; text-decoration: none;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"
+                    width="28" height="28" style="filter: invert(1);" />
             </a>
         </div>
     </footer>
