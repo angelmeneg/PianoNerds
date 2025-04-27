@@ -142,9 +142,9 @@
             Here, you can experience one of the finest interpretations of this enchanting piece:
           </p>
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/sUQoFOIn8dA" title="YouTube video player"
+            <iframe src="https://www.youtube.com/embed/sUQoFOIn8dA?enablejsapi=1" title="Maurice Ravel's Ondine performed by a pianist"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen loading="lazy" class="youtube-video"></iframe>
           </div>
         </div>
       </div>
@@ -206,9 +206,9 @@
             Again, here you can find the best performance of this piece (always in my opinion).
           </p>
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/XmZUQJ6jXz4" title="YouTube video player"
+            <iframe src="https://www.youtube.com/embed/XmZUQJ6jXz4?enablejsapi=1" title="Rachmaninoff's Prelude in G Major performed by a pianist"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen loading="lazy" class="youtube-video"></iframe>
           </div>
           <div class="insider-note">
             <p>
@@ -298,9 +298,9 @@
             breathtaking piece:
           </p>
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/PFFJ81OXnJI" title="YouTube video player"
+            <iframe src="https://www.youtube.com/embed/PFFJ81OXnJI?enablejsapi=1" title="Liszt's Ballade No. 2 in B Minor performed by a pianist"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen loading="lazy" class="youtube-video"></iframe>
           </div>
         </div>
       </div>
@@ -336,6 +336,113 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
+
+  <!-- YouTube Video Pause Script -->
+  <script>
+    // Load YouTube API
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Store YouTube players
+    var players = {};
+
+    // Function to check if an element is in viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= -rect.height/2 &&
+        rect.left >= 0 &&
+        rect.bottom <= window.innerHeight + rect.height/2 &&
+        rect.right <= window.innerWidth
+      );
+    }
+
+    // Called when YouTube API is ready
+    function onYouTubeIframeAPIReady() {
+      // Get all YouTube iframes
+      const youtubeIframes = document.querySelectorAll('iframe[src*="youtube.com/embed"]');
+
+      youtubeIframes.forEach((iframe, index) => {
+        // Get the video ID from the src attribute
+        const src = iframe.src;
+        const match = src.match(/embed\/([^?]+)/);
+
+        if (match && match[1]) {
+          const videoId = match[1];
+          const playerId = 'youtube-player-' + index;
+
+          // Set an ID on the iframe for the YouTube API to target
+          iframe.id = playerId;
+
+          // Create a YouTube player for this iframe
+          players[playerId] = new YT.Player(playerId, {
+            events: {
+              'onStateChange': onPlayerStateChange
+            }
+          });
+        }
+      });
+
+      // Initial check for videos in viewport
+      checkVisibility();
+    }
+
+    // Handle player state changes
+    function onPlayerStateChange(event) {
+      // If a video starts playing, pause any other videos that might be playing
+      if (event.data === YT.PlayerState.PLAYING) {
+        const currentPlayerId = event.target.getIframe().id;
+
+        Object.keys(players).forEach(playerId => {
+          if (playerId !== currentPlayerId && players[playerId].getPlayerState() === YT.PlayerState.PLAYING) {
+            players[playerId].pauseVideo();
+          }
+        });
+      }
+    }
+
+    // Function to check visibility and pause/play videos accordingly
+    function checkVisibility() {
+      Object.keys(players).forEach(playerId => {
+        const iframe = document.getElementById(playerId);
+
+        if (iframe && players[playerId]) {
+          if (!isInViewport(iframe)) {
+            // If the player exists and is playing, pause it
+            if (players[playerId].getPlayerState && players[playerId].getPlayerState() === YT.PlayerState.PLAYING) {
+              players[playerId].pauseVideo();
+            }
+          }
+        }
+      });
+    }
+
+    // Throttle function to limit how often a function runs
+    function throttle(func, limit) {
+      let inThrottle;
+      return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      };
+    }
+
+    // Add scroll event listener with throttling
+    window.addEventListener('scroll', throttle(function() {
+      window.requestAnimationFrame(checkVisibility);
+    }, 250), { passive: true });
+
+    // Also check on window resize
+    window.addEventListener('resize', throttle(function() {
+      window.requestAnimationFrame(checkVisibility);
+    }, 250), { passive: true });
+  </script>
 </body>
 
 </html>
