@@ -208,7 +208,7 @@
 
     /* Adjust carousel for small screens */
     #composerCarousel .carousel-item {
-        height: 350px;
+        height: 450px;
     }
 
     #composerCarousel .controls-wrapper {
@@ -232,7 +232,7 @@
 @media (max-width: 576px) {
     /* Adjust carousel for very small screens */
     #composerCarousel .carousel-item {
-        height: 250px;
+        height: 350px;
     }
 
     /* Adjust game cards for mobile */
@@ -271,7 +271,7 @@
 /* Very small screens */
 @media (max-width: 400px) {
     #composerCarousel .carousel-item {
-        height: 220px;
+        height: 350px;
     }
 
     #composerCarousel .controls-wrapper {
