@@ -4,159 +4,187 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Piano Nerds - Guess The Composer</title>
+    <meta name="description" content="Test your musical knowledge with our 'Guess the Composer' game. Listen to classical piano pieces by Ravel, Rachmaninoff, and Liszt and identify the composers." />
+    <meta name="keywords" content="piano music game, guess the composer, classical music quiz, Ravel, Rachmaninoff, Liszt, piano pieces" />
+    <meta name="author" content="Piano Nerds" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Piano Nerds - Guess the Composer Game" />
+    <meta property="og:description" content="Test your musical ear with our interactive game. Listen to classical piano pieces and guess which famous composer wrote them." />
+    <meta property="og:image" content="media/Screenshot (22) (1).png" />
+    <meta property="og:url" content="https://pianonerds.com/GuessTheComposer.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://pianonerds.com/GuessTheComposer.html" />
+    <title>Piano Nerds - Guess the Composer Game | Test Your Classical Music Knowledge</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/dark-theme.css">
+    <!-- Scripts -->
+    <script src="js/translations.js" defer></script>
+    <script src="js/theme-switcher.js" defer></script>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Guess the Composer",
+      "description": "An interactive music quiz where you listen to classical piano pieces and identify the composers.",
+      "url": "https://pianonerds.com/GuessTheComposer.html",
+      "genre": "Educational Game",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Classical Music Enthusiasts"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Piano Nerds",
+        "url": "https://pianonerds.com"
+      }
+    }
+    </script>
 </head>
 
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
-        <div class="container-fluid">
-            <span class="navbar-brand mx-auto navbar-centered-title fw-bold fs-4">
-                Piano Nerds
-            </span>
-        </div>
-    </nav>
-
-    <!-- WelcomingBar -->
-    <div class="container-fluid main-section">
-        <!-- Row for top nav links -->
-        <div class="row">
-            <div class="col-auto">
-                <a href="index.html" class="btn btn-outline-dark me-2 mb-2">My favorite pieces</a>
-                <a href="YourSuggestions.html" class="btn btn-outline-dark me-2 mb-2">Your
-                    suggestions</a>
-                <a href="GuessTheComposer.html" class="btn btn-dark me-2 mb-2 active disabled" aria-current="page">Guess
-                    the Composer</a>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+            <div class="container-fluid">
+                <h1 class="navbar-brand mx-auto navbar-centered-title fw-bold fs-4 m-0" data-translate="title" data-category="nav">
+                    Piano Nerds
+                </h1>
             </div>
-        </div>
+        </nav>
 
-        <!-- Row for center text -->
-        <div class="row justify-content-center text-center mt-4 mt-md-5">
-            <div class="col-12 col-md-10 col-lg-8">
-                <h5 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3"><strong>Welcome to Piano Nerds, a place for all
-                        things
-                        piano!</strong></h5>
-                <p class="px-2">
-                    Whether you're a passionate pianist, an eager learner, or just someone who loves the sound of the
-                    keys, this
-                    site is for you.
-                    Piano music has the power to inspire, heal, and transport us to different worlds. Here, you’ll find
-                    a
-                    collection of my favorite pieces,
-                    a space for you to share your own suggestions, and a fun interactive challenge where you can test
-                    your musical
-                    ear.
-                </p>
+        <!-- WelcomingBar -->
+        <div class="container-fluid main-section">
+            <!-- Row for top nav links -->
+            <div class="row">
+                <div class="col-auto">
+                    <a href="index.html" class="btn btn-outline-dark me-2 mb-2" data-translate="favorites" data-category="nav">My favorite pieces</a>
+                    <a href="YourSuggestions.html" class="btn btn-outline-dark me-2 mb-2" data-translate="suggestions" data-category="nav">Your suggestions</a>
+                    <a href="GuessTheComposer.html" class="btn btn-dark me-2 mb-2 active disabled" aria-current="page" data-translate="game" data-category="nav">Guess the Composer</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Row for bottom quote -->
-        <div class="row">
-            <div class="col">
-                <div class="quote">
-                    “Without music, life would be a mistake”
-                    <div class="quote-author">— Friedrich Nietzsche</div>
+            <!-- Row for center text -->
+            <div class="row justify-content-center text-center mt-4 mt-md-5">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <h2 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3 fs-5"><strong data-translate="welcome" data-category="nav">Welcome to Piano Nerds, a place for all things piano!</strong></h2>
+                    <p class="px-2" data-translate="intro" data-category="nav">
+                        Whether you're a passionate pianist, an eager learner, or just someone who loves the sound of the
+                        keys, this site is for you.
+                        Piano music has the power to inspire, heal, and transport us to different worlds. Here, you'll find
+                        a collection of my favorite pieces,
+                        a space for you to share your own suggestions, and a fun interactive challenge where you can test
+                        your musical ear.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row for bottom quote -->
+            <div class="row">
+                <div class="col">
+                    <blockquote class="quote">
+                        <span data-translate="quote" data-category="nav">"Without music, life would be a mistake"</span>
+                        <cite class="quote-author" data-translate="author" data-category="nav"><br>— Friedrich Nietzsche</cite>
+                    </blockquote>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <!-- BackgroundImage -->
-    <img src="media/Screenshot (22) (1).png" alt="A piano" class="img-fluid background-img" />
-
-
+    <img src="media/Screenshot (22) (1).png" alt="Grand piano in a concert hall" class="img-fluid background-img" width="1200" height="800" loading="lazy" />
 
     <!-- Main Content -->
-    <div class="container-fluid overlap">
+    <main class="container-fluid overlap">
         <div class="row">
             <div class="col-12 col-md-10 offset-0 offset-md-1 main-content">
 
                 <!-- Game Time Section -->
-                <div class="row mb-4">
+                <section class="row mb-4">
                     <!-- Center the card at different breakpoints -->
                     <div class="col-12
                       col-sm-10 offset-sm-1
                       col-md-8  offset-md-2
                       col-lg-8  offset-lg-2">
                         <div class="game-time-card">
-                            <div class="game-time-badge">Game Time!</div>
+                            <div class="game-time-badge" data-translate="game_time" data-category="game">Game Time!</div>
                             <div class="card-body px-4 py-3">
-                                <p>
-                                    Now that you're familiar with the above three composers, it’s time to play a
+                                <h3 class="visually-hidden">Game Instructions</h3>
+                                <p data-translate="game_intro" data-category="game">
+                                    Now that you're familiar with the above three composers, it's time to play a
                                     <strong>game</strong>.
                                 </p>
-                                <p>
-                                    You’re gonna hear 3 pieces and you have to check from the options below,
+                                <p data-translate="game_instructions" data-category="game">
+                                    You're gonna hear 3 pieces and you have to check from the options below,
                                     <em>who is the composer!</em>
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Reminder Section -->
-                <div class="row mb-4">
+                <section class="row mb-4">
                     <!-- center & size same as Game Time card -->
                     <div class="col-12
                 col-sm-10 offset-sm-1
                 col-md-8  offset-md-2
                 col-lg-8  offset-lg-2">
                         <div class="border border-2 border-dark rounded p-5">
-                            <p class="mb-4">
-
+                            <h3 class="visually-hidden">Composer Reminder</h3>
+                            <p class="mb-4" data-translate="reminder" data-category="game">
                                 Little <em>reminder</em> of the composers you heard before:
-
                             </p>
                             <!-- Composer 1 -->
                             <div class="row align-items-center mb-4 px-4">
                                 <div class="col-8">
-                                    <strong>1) Maurice Ravel</strong>
+                                    <strong>1) <span data-translate="ravel" data-category="game">Maurice Ravel</span></strong>
                                 </div>
                                 <div class="col-4 text-end">
-                                    <img src="media/Maurice_Ravel_1925.jpg" alt="Maurice Ravel" class="img-fluid"
-                                        style="max-width:100%; width:120px;">
+                                    <img src="media/Maurice_Ravel_1925.jpg" alt="Portrait of Maurice Ravel" class="img-fluid"
+                                        style="max-width:100%; width:120px;" width="120" height="150" loading="lazy">
                                 </div>
                             </div>
 
                             <!-- Composer 2 -->
                             <div class="row align-items-center mb-4 px-4">
                                 <div class="col-8">
-                                    <strong>2) Sergei Rachmaninoff</strong>
+                                    <strong>2) <span data-translate="rachmaninoff" data-category="game">Sergei Rachmaninoff</span></strong>
                                 </div>
                                 <div class="col-4 text-end">
-                                    <img src="media/Sergei-Rachmaninoff.jpg.webp" alt="Sergei Rachmaninoff"
-                                        class="img-fluid" style="max-width:100%; width:120px;">
+                                    <img src="media/Sergei-Rachmaninoff.jpg.webp" alt="Portrait of Sergei Rachmaninoff"
+                                        class="img-fluid" style="max-width:100%; width:120px;" width="120" height="150" loading="lazy">
                                 </div>
                             </div>
 
                             <!-- Composer 3 -->
                             <div class="row align-items-center mb-4 px-4">
                                 <div class="col-8">
-                                    <strong>3) Franz Liszt</strong>
+                                    <strong>3) <span data-translate="liszt" data-category="game">Franz Liszt</span></strong>
                                 </div>
                                 <div class="col-4 text-end">
-                                    <img src="media/Liszt-kaulbach.jpg" alt="Franz Liszt" class="img-fluid"
-                                        style="max-width:100%; width:120px;">
+                                    <img src="media/Liszt-kaulbach.jpg" alt="Portrait of Franz Liszt" class="img-fluid"
+                                        style="max-width:100%; width:120px;" width="120" height="150" loading="lazy">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Carousel Section -->
-                <div class="row mb-4">
+                <section class="row mb-4">
                     <div class="col-12
                 col-sm-10 offset-sm-1
                 col-md-8  offset-md-2
                 col-lg-8  offset-lg-2">
                         <div class="border border-2 border-dark rounded p-4 position-relative">
+                            <h3 class="visually-hidden">Guess the Composer Quiz</h3>
 
                             <!-- Game Carousel -->
                             <div id="composerCarousel" class="carousel slide mb-4" data-bs-touch="false"
@@ -166,13 +194,14 @@
                                     <div class="carousel-item active"
                                         style="background-image:url('media/little_red_riding_hood_by_evanira-ondeviantartcom.jpg')">
                                         <div class="carousel-caption">
-                                            <h5 data-translate="piece1" data-category="game">Piece 1</h5>
+                                            <h4 data-translate="piece1" data-category="game">Piece 1</h4>
                                         </div>
                                         <div class="controls-wrapper text-center d-flex flex-column align-items-center">
                                             <audio controls class="w-90 mb-3">
                                                 <source
                                                     src="media/Evgeny Kissin Kid plays Rachmaninoff Etude Tableaux Op.39 No.6 - Little Red Riding Hood.mp3"
                                                     type="audio/mpeg">
+                                                Your browser does not support the audio element.
                                             </audio>
                                             <div class="radio-buttons-wrapper">
                                                 <div class="form-check form-check-inline">
@@ -197,13 +226,14 @@
                                     <div class="carousel-item"
                                         style="background-image:url('media/Alborada\ del\ Gracioso.jpg')">
                                         <div class="carousel-caption">
-                                            <h5 data-translate="piece2" data-category="game">Piece 2</h5>
+                                            <h4 data-translate="piece2" data-category="game">Piece 2</h4>
                                         </div>
                                         <div class="controls-wrapper text-center d-flex flex-column align-items-center">
                                             <audio controls class="w-90 mb-3">
                                                 <source
                                                     src="media/Alicia de Larrocha plays Ravel - Alborada del Gracioso.mp3"
                                                     type="audio/mpeg">
+                                                Your browser does not support the audio element.
                                             </audio>
                                             <div class="radio-buttons-wrapper">
                                                 <div class="form-check form-check-inline">
@@ -228,13 +258,14 @@
                                     <div class="carousel-item"
                                         style="background-image:url('media/mazeppa-a-controversial-ukrainian-hero.jpg')">
                                         <div class="carousel-caption">
-                                            <h5 data-translate="piece3" data-category="game">Piece 3</h5>
+                                            <h4 data-translate="piece3" data-category="game">Piece 3</h4>
                                         </div>
                                         <div class="controls-wrapper text-center d-flex flex-column align-items-center">
                                             <audio controls class="w-90 mb-3">
                                                 <source
                                                     src="media/Liszt-Transcendental Étude (S.139) no.04 (Mazeppa).mp3"
                                                     type="audio/mpeg">
+                                                Your browser does not support the audio element.
                                             </audio>
                                             <div class="radio-buttons-wrapper">
                                                 <div class="form-check form-check-inline">
@@ -260,7 +291,7 @@
                                 <button class="carousel-control-prev" type="button" data-bs-target="#composerCarousel"
                                     data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Prev</span>
+                                    <span class="visually-hidden">Previous</span>
                                 </button>
                                 <button class="carousel-control-next" type="button" data-bs-target="#composerCarousel"
                                     data-bs-slide="next">
@@ -271,50 +302,38 @@
 
                             <!-- Check Score Button -->
                             <div class="text-center position-relative py-4">
-                                <button id="checkScoreBtn" class="btn btn-outline-dark">Check your Score</button>
+                                <button id="checkScoreBtn" class="btn btn-outline-dark" data-translate="check_score" data-category="game">Check your Score</button>
                                 <!-- Bubble Text -->
                                 <div id="scoreBubble" class="bubble-text d-none">
-                                    <h6 class="fw-bold text-success mb-1">Congrats!</h6>
+                                    <h5 class="fw-bold text-success mb-1" data-translate="congrats" data-category="game">Congrats!</h5>
                                     <p id="scoreText" class="mb-0"></p>
                                 </div>
                             </div>
-
-
-
-
-
-
-
                         </div>
                     </div>
-                </div>
-
-
-
-
+                </section>
             </div>
         </div>
-    </div>
-
+    </main>
 
     <!-- Footer -->
     <footer class="custom-footer">
-        <p style="margin-bottom: 1rem; font-size: 1rem;">
+        <p style="margin-bottom: 1rem; font-size: 1rem;" data-translate="footer" data-category="nav">
             © 2025 Piano Nerds. All rights blibber-blabbered, frobulated, and snickerdoodled.<br>
             Unauthorized flibber-flobbing strictly forbidden under the Galactic Code of Musical Mayhem. 🪐🎵
         </p>
         <div style="margin-top: 1rem;" class="d-flex justify-content-center flex-wrap">
-            <a href="https://github.com/angelmeneg" style="margin: 10px; color: #f1f1f1; text-decoration: none;">
+            <a href="https://github.com/angelmeneg" style="margin: 10px; color: #f1f1f1; text-decoration: none;" aria-label="GitHub Profile">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
                     width="28" height="28" style="filter: invert(1);" />
             </a>
             <a href="https://www.instagram.com/menegatos_/"
-                style="margin: 10px; color: #f1f1f1; text-decoration: none;">
+                style="margin: 10px; color: #f1f1f1; text-decoration: none;" aria-label="Instagram Profile">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"
                     width="28" height="28" style="filter: invert(1);" />
             </a>
             <a href="https://www.youtube.com/@angelmeneg6507"
-                style="margin: 10px; color: #f1f1f1; text-decoration: none;">
+                style="margin: 10px; color: #f1f1f1; text-decoration: none;" aria-label="YouTube Channel">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"
                     width="28" height="28" style="filter: invert(1);" />
             </a>
@@ -332,15 +351,18 @@
 
             // Update the bubble text
             const scoreBubble = document.getElementById('scoreBubble');
-            document.getElementById('scoreText').textContent = `You scored ${score} out of ${correct.length}!`;
+            const scoreText = document.getElementById('scoreText');
+            const scoreString = `You scored ${score} out of ${correct.length}!`;
+            scoreText.textContent = scoreString;
+            scoreText.originalText = scoreString;
 
             // Show the bubble
             scoreBubble.classList.remove('d-none');
-
+            
             // Ensure the button is visible in viewport when bubble appears
             const checkScoreBtn = document.getElementById('checkScoreBtn');
             const rect = checkScoreBtn.getBoundingClientRect();
-
+            
             // If button is near the bottom of viewport, scroll to make it more centered
             if (rect.bottom > window.innerHeight - 100) {
                 window.scrollBy({
@@ -354,9 +376,7 @@
                 scoreBubble.classList.add('d-none');
             }, 5000);
         });
-    </script>
 
-    <script>
         const myCarousel = document.getElementById('composerCarousel');
 
         myCarousel.addEventListener('slide.bs.carousel', function () {
@@ -368,15 +388,10 @@
         });
     </script>
 
-
-
-
     <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>

@@ -58,6 +58,7 @@
 
 /* move the slide title to the top (instead of bottom) */
 #composerCarousel .carousel-caption {
+    color: #000;
     top: 1rem;
     bottom: auto;
     background: rgba(255, 255, 255, 0.75);
