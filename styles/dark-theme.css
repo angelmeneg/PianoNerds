@@ -1,0 +1,320 @@
+/* Dark Theme Styles for Piano Nerds */
+
+/* Variables for dark theme colors */
+:root.dark-theme {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border-color: #444;
+    --accent-color: #bb86fc;
+    --accent-color-hover: #9d4edd;
+    --danger-color: #cf6679;
+    --success-color: #03dac6;
+    --card-bg: #2d2d2d;
+    --navbar-bg: #1a1a1a;
+    --footer-bg: #0a0a0a;
+    --footer-text: #d0d0d0;
+    --input-bg: #333;
+    --input-text: #e0e0e0;
+    --input-border: #555;
+    --btn-primary-bg: #bb86fc;
+    --btn-primary-text: #121212;
+    --btn-secondary-bg: #3d3d3d;
+    --btn-secondary-text: #e0e0e0;
+    --btn-outline-bg: transparent;
+    --btn-outline-text: #bb86fc;
+    --btn-outline-border: #bb86fc;
+    --btn-outline-hover-bg: #bb86fc;
+    --btn-outline-hover-text: #121212;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Body and general elements */
+body.dark-theme {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.dark-theme .main-section {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .main-content {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    box-shadow: 0px 4px 6px var(--shadow-color);
+}
+
+/* Navbar styling */
+.dark-theme .navbar {
+    background-color: var(--navbar-bg) !important;
+}
+
+.dark-theme .navbar-brand, 
+.dark-theme .navbar-centered-title {
+    color: var(--text-primary) !important;
+}
+
+/* Button styling */
+.dark-theme .btn-dark {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
+    border-color: var(--border-color);
+}
+
+.dark-theme .btn-outline-dark {
+    background-color: var(--btn-outline-bg);
+    color: var(--btn-outline-text);
+    border-color: var(--btn-outline-border);
+}
+
+.dark-theme .btn-outline-dark:hover,
+.dark-theme .btn-outline-dark:focus {
+    background-color: var(--btn-outline-hover-bg);
+    color: var(--btn-outline-hover-text);
+}
+
+.dark-theme .btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border-color: var(--btn-primary-bg);
+}
+
+.dark-theme .btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
+    border-color: var(--border-color);
+}
+
+/* Quote styling */
+.dark-theme .quote {
+    color: var(--text-secondary);
+    border-right-color: var(--accent-color);
+}
+
+.dark-theme .quote-author {
+    color: var(--text-primary);
+}
+
+/* Tables */
+.dark-theme .table {
+    color: var(--text-primary);
+}
+
+.dark-theme .table-bordered {
+    border-color: var(--border-color);
+}
+
+.dark-theme .table th,
+.dark-theme .table td {
+    border-color: var(--border-color);
+}
+
+/* Form elements */
+.dark-theme .form-control,
+.dark-theme .form-select,
+.dark-theme textarea {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--input-border);
+}
+
+.dark-theme .form-control:focus,
+.dark-theme .form-select:focus,
+.dark-theme textarea:focus {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+}
+
+.dark-theme .form-check-input {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+}
+
+.dark-theme .form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.dark-theme .form-outline {
+    border-color: var(--border-color);
+    background-color: var(--bg-tertiary);
+}
+
+/* Cards and borders */
+.dark-theme .border,
+.dark-theme .card,
+.dark-theme .game-time-card {
+    border-color: var(--border-color) !important;
+    background-color: var(--card-bg);
+}
+
+.dark-theme .game-time-badge {
+    background-color: var(--accent-color);
+    color: var(--btn-primary-text);
+    border-color: var(--accent-color);
+}
+
+.dark-theme .card-body {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+/* Bubble text */
+.dark-theme .bubble-text {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.dark-theme .text-success {
+    color: var(--success-color) !important;
+}
+
+/* Radio buttons wrapper */
+.dark-theme .radio-buttons-wrapper {
+    background-color: rgba(45, 45, 45, 0.8);
+}
+
+.dark-theme .radio-buttons-wrapper label {
+    color: var(--text-primary);
+}
+
+/* Carousel */
+.dark-theme .carousel-caption {
+    background: rgba(30, 30, 30, 0.85);
+    color: var(--text-primary);
+}
+
+.dark-theme #composerCarousel .carousel-caption h5 {
+    color: #fff;
+    text-shadow: none;
+}
+
+.dark-theme .carousel-control-prev-icon,
+.dark-theme .carousel-control-next-icon {
+    filter: invert(1) grayscale(100);
+}
+
+/* Footer */
+.dark-theme .custom-footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    border-top-color: var(--border-color);
+}
+
+/* Extra fun section */
+.dark-theme .mb-3.p-4.mx-auto.text-center {
+    background-color: var(--bg-tertiary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-theme .mb-3.p-4.mx-auto.text-center label {
+    color: var(--text-primary) !important;
+}
+
+.dark-theme .mb-3.p-4.mx-auto.text-center span {
+    color: var(--text-secondary) !important;
+}
+
+/* Insider note */
+.dark-theme .insider-note {
+    background: var(--bg-tertiary);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.dark-theme .insider-note p {
+    color: var(--text-secondary);
+}
+
+/* Custom HR */
+.dark-theme .custom-hr {
+    background: var(--border-color);
+    box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+/* Video wrapper */
+.dark-theme .video-wrapper {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.dark-theme .video-description {
+    color: var(--text-secondary);
+}
+
+/* Theme toggle button */
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .theme-toggle {
+    background-color: #333;
+    color: #fff;
+    border-color: #bb86fc;
+}
+
+.theme-toggle .icon {
+    font-size: 1rem;
+}
+
+/* Dark theme adjustments for specific elements */
+.dark-theme .bg-light {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.dark-theme strong, 
+.dark-theme .fw-bold {
+    color: var(--text-primary);
+}
+
+.dark-theme em, 
+.dark-theme .fst-italic {
+    color: var(--text-secondary);
+}
+
+/* Ensure images have proper contrast in dark mode */
+.dark-theme img {
+    filter: brightness(0.9);
+}
+
+/* Language switcher in dark mode */
+.dark-theme .lang-switcher {
+    background-color: #333;
+    color: #fff;
+    border-color: var(--accent-color);
+}
+
+.dark-theme .lang-switcher:hover {
+    background-color: var(--accent-color);
+    color: #121212;
+}
