@@ -1,0 +1,196 @@
+/* Specific styles for GuessTheComposer.html */
+
+/* Bubble Text Styling */
+.bubble-text {
+    position: absolute;
+    top: 100%;
+    /* Position below the button by default */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: center;
+    width: 250px;
+    margin-top: 10px; /* Add some space between button and bubble */
+}
+
+/* Media query for smaller screens to position bubble above button */
+@media (max-width: 576px) {
+    .bubble-text {
+        top: auto; /* Reset top positioning */
+        bottom: 100%; /* Position above the button */
+        margin-top: 0; /* Reset top margin */
+        margin-bottom: 10px; /* Add space between button and bubble */
+    }
+}
+
+.radio-buttons-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Light white background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.radio-buttons-wrapper label {
+    color: black;
+    /* Make the radio button labels black */
+    font-weight: bold;
+}
+
+/* make each carousel‐item a fixed height and cover its bg image */
+#composerCarousel .carousel-item {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* move the slide title to the top (instead of bottom) */
+#composerCarousel .carousel-caption {
+    top: 1rem;
+    bottom: auto;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    z-index: 5;
+}
+
+/* ensure audio & buttons sit above the bottom edge */
+#composerCarousel .controls-wrapper {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 10; /* Higher z-index to ensure it's on top */
+}
+
+/* Make sure inactive slides are truly hidden */
+#composerCarousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#composerCarousel .carousel-item.active {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+}
+
+/* Ensure audio controls are properly sized and positioned */
+#composerCarousel audio {
+    width: 100%;
+    max-width: 100%;
+    z-index: 15;
+    position: relative;
+}
+
+/* === Game Time badge styling === */
+.game-time-card {
+    position: relative;
+    border: 2px solid black;
+    /* match your other content borders */
+    border-radius: 10px;
+    /* match your main-content corners */
+    padding-top: 2.5rem;
+    /* give room at the top for the badge */
+}
+
+.game-time-badge {
+    position: absolute;
+    top: 0;
+    /* anchor to the top edge of the card */
+    left: 20%;
+    /* center horizontally */
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* white background */
+    border: 2px solid black;
+    /* same border style as the card */
+    border-radius: 6px;
+    /* pill shape */
+    padding: 0.4rem 0.8rem;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-section {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    audio {
+        width: 80%;
+        max-width: 100%;
+    }
+    
+    /* Adjust carousel for medium screens */
+    #composerCarousel .carousel-item {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    audio {
+        width: 80%;
+        max-width: 100%;
+    }
+    
+    /* Adjust carousel for small screens */
+    #composerCarousel .carousel-item {
+        height: 300px;
+    }
+    
+    .radio-buttons-wrapper {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjust carousel for very small screens */
+    #composerCarousel .carousel-item {
+        height: 250px;
+    }
+    
+    /* Adjust game cards for mobile */
+    .game-time-card, .border {
+        padding: 10px !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Fix for audio elements */
+    audio {
+        width: 80%;
+        max-width: 100%;
+    }
+    
+    /* Fix for carousel controls */
+    .carousel-control-prev, .carousel-control-next {
+        width: 10%;
+    }
+    
+    /* Fix for controls wrapper */
+    .controls-wrapper {
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 0 5px;
+    }
+}

@@ -1,0 +1,295 @@
+/* Common styling for all pages */
+.main-section {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.quote {
+    text-align: end;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #555;
+    border-right: 4px solid #6c757d;
+    padding-right: 1rem;
+    margin-top: 2rem;
+}
+
+.quote-author {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Background image styling */
+.background-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* Ensure the shadow is positioned correctly */
+    box-shadow: 0 -8px 12px rgba(0, 0, 0, 0.2);
+    /* Shadow going upwards */
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Main content overlap container */
+.overlap {
+    transform: translateY(-220px);
+    margin-bottom: -220px; /* Prevent extra space at bottom */
+}
+
+/* Main content inner container */
+.main-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    border: 2px solid black;
+}
+
+/* Video container styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Video wrapper styles */
+.video-wrapper {
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-description {
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* Fix for audio elements */
+audio {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Horizontal Rule styling */
+.custom-hr {
+    border: none;
+    height: 4px;
+    background: #ccc;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+/* Insider note styling */
+.insider-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 4rem auto;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.insider-note p {
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 100%;
+    color: #444;
+}
+
+/* Footer styling */
+.custom-footer {
+    background: #1a1a1a;
+    color: #f1f1f1;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 4px solid #444;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive table */
+.table-responsive-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Text responsiveness */
+.text-justify {
+    text-align: justify;
+}
+
+/* Global responsive styles */
+@media (max-width: 992px) {
+    .fs-4 {
+        font-size: 1.1rem !important;
+    }
+
+    .fs-5 {
+        font-size: 1rem !important;
+    }
+
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .custom-hr {
+        width: 80%;
+    }
+
+    .insider-note {
+        padding: 1.5rem;
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reduce overlap on smaller screens */
+    .overlap {
+        transform: translateY(-100px);
+        margin-bottom: -100px;
+    }
+
+    /* Improve table display on small screens */
+    .table-bordered {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure columns stack properly on mobile */
+    .col-md-3,
+    .col-md-4,
+    .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Adjust quote for mobile */
+    .quote {
+        font-size: 1.1rem;
+        text-align: center;
+        border-right: none;
+        /* Removed border-bottom that was causing the gray line */
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 0; /* Ensure no extra space at bottom */
+    }
+
+    /* Center content on mobile */
+    .main-content {
+        padding: 15px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    /* Adjust video container */
+    .video-container {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further reduce overlap for very small screens */
+    .overlap {
+        transform: translateY(-50px);
+        margin-bottom: -50px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Make navbar title smaller on mobile */
+    .navbar-centered-title {
+        font-size: 1.25rem !important;
+    }
+
+    /* Adjust button group for mobile */
+    .col-auto {
+        width: 100%;
+    }
+
+    .col-auto a.btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        margin-right: 0 !important;
+    }
+
+    /* Adjust main content for very small screens */
+    .main-content {
+        border-radius: 0;
+        padding: 10px;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .custom-hr {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .insider-note {
+        padding: 1rem;
+        margin: 1.5rem auto;
+    }
+
+    /* Fix for row padding */
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Fix for columns */
+    [class*="col-"] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /* Fix for images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
