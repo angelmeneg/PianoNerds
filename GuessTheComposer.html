@@ -182,6 +182,10 @@
 
         /* Global responsive styles */
         @media (max-width: 992px) {
+            audio {
+                width: 80%;
+                max-width: 100%;
+            }
             .fs-4 {
                 font-size: 1.1rem !important;
             }
@@ -201,6 +205,10 @@
         }
 
         @media (max-width: 768px) {
+            audio {
+                width: 80%;
+                max-width: 100%;
+            }
             /* Reduce overlap on smaller screens */
             .overlap {
                 transform: translateY(-100px);
@@ -258,6 +266,14 @@
             .container-fluid {
                 padding-left: 0;
                 padding-right: 0;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            body {
+                overflow-x: hidden;
+                width: 100%;
+                max-width: 100%;
             }
 
             /* Make navbar title smaller on mobile */
@@ -303,6 +319,44 @@
             /* Adjust game cards for mobile */
             .game-time-card, .border {
                 padding: 10px !important;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            /* Fix for audio elements */
+            audio {
+                width: 80%;
+                max-width: 100%;
+            }
+
+            /* Fix for carousel controls */
+            .carousel-control-prev, .carousel-control-next {
+                width: 10%;
+            }
+
+            /* Fix for images */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* Fix for controls wrapper */
+            .controls-wrapper {
+                width: 100% !important;
+                box-sizing: border-box;
+                padding: 0 5px;
+            }
+
+            /* Fix for row padding */
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            /* Fix for columns */
+            [class*="col-"] {
+                padding-left: 5px;
+                padding-right: 5px;
             }
         }
 
@@ -422,7 +476,7 @@
                                 </div>
                                 <div class="col-4 text-end">
                                     <img src="media/Maurice_Ravel_1925.jpg" alt="Maurice Ravel" class="img-fluid"
-                                        style="max-width:120px;">
+                                        style="max-width:100%; width:120px;">
                                 </div>
                             </div>
 
@@ -433,7 +487,7 @@
                                 </div>
                                 <div class="col-4 text-end">
                                     <img src="media/Sergei-Rachmaninoff.jpg.webp" alt="Sergei Rachmaninoff"
-                                        class="img-fluid" style="max-width:120px;">
+                                        class="img-fluid" style="max-width:100%; width:120px;">
                                 </div>
                             </div>
 
@@ -444,7 +498,7 @@
                                 </div>
                                 <div class="col-4 text-end">
                                     <img src="media/Liszt-kaulbach.jpg" alt="Franz Liszt" class="img-fluid"
-                                        style="max-width:120px;">
+                                        style="max-width:100%; width:120px;">
                                 </div>
                             </div>
                         </div>
