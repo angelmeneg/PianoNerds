@@ -29,17 +29,24 @@
 }
 
 .radio-buttons-wrapper {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Light white background */
-    padding: 10px 20px;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 8px 15px;
+    border-radius: 8px;
     display: inline-block;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .radio-buttons-wrapper label {
     color: black;
-    /* Make the radio button labels black */
     font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Make radio buttons more visible */
+.radio-buttons-wrapper .form-check-input {
+    margin-top: 0.2rem;
 }
 
 /* make each carousel‐item a fixed height and cover its bg image */
@@ -72,7 +79,8 @@
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 80%; /* Reduced from 90% to make it narrower */
+    max-width: 600px; /* Add max-width to control size on larger screens */
     z-index: 10; /* Higher z-index to ensure it's on top */
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     padding: 15px;
@@ -144,12 +152,14 @@
         height: 600px; /* Taller for large screens */
     }
 
-    audio {
-        width: 70%;
+    #composerCarousel audio {
+        width: 80%;
     }
 
-    .controls-wrapper {
+    #composerCarousel .controls-wrapper {
         bottom: 3rem !important;
+        width: 70%; /* Narrower on large screens */
+        max-width: 550px;
     }
 }
 
@@ -159,15 +169,20 @@
         height: 550px;
     }
 
-    audio {
+    #composerCarousel audio {
+        width: 85%;
+    }
+
+    #composerCarousel .controls-wrapper {
         width: 75%;
+        max-width: 500px;
     }
 }
 
 /* Medium screens */
 @media (max-width: 992px) {
-    audio {
-        width: 80%;
+    #composerCarousel audio {
+        width: 90%;
         max-width: 100%;
     }
 
@@ -175,12 +190,18 @@
     #composerCarousel .carousel-item {
         height: 450px;
     }
+
+    #composerCarousel .controls-wrapper {
+        width: 80%;
+        max-width: 450px;
+        padding: 12px;
+    }
 }
 
 /* Small-medium screens */
 @media (max-width: 768px) {
-    audio {
-        width: 85%;
+    #composerCarousel audio {
+        width: 95%;
         max-width: 100%;
     }
 
@@ -189,8 +210,20 @@
         height: 350px;
     }
 
+    #composerCarousel .controls-wrapper {
+        width: 85%;
+        max-width: 400px;
+        padding: 10px;
+        bottom: 1.5rem;
+    }
+
     .radio-buttons-wrapper {
-        padding: 8px 15px;
+        padding: 8px 10px;
+    }
+
+    /* Make radio buttons more compact */
+    .form-check-inline {
+        margin-right: 0.5rem;
     }
 }
 
@@ -209,8 +242,8 @@
     }
 
     /* Fix for audio elements */
-    audio {
-        width: 90%;
+    #composerCarousel audio {
+        width: 100%;
         max-width: 100%;
     }
 
@@ -220,9 +253,41 @@
     }
 
     /* Fix for controls wrapper */
-    .controls-wrapper {
-        width: 100% !important;
+    #composerCarousel .controls-wrapper {
+        width: 90% !important;
+        max-width: 300px;
         box-sizing: border-box;
-        padding: 0 5px;
+        padding: 8px;
+        bottom: 1rem;
+    }
+
+    /* Make radio buttons more compact */
+    .radio-buttons-wrapper .form-check-inline {
+        margin-right: 0.3rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+    #composerCarousel .carousel-item {
+        height: 220px;
+    }
+
+    #composerCarousel .controls-wrapper {
+        width: 95% !important;
+        max-width: 280px;
+        padding: 6px;
+        bottom: 0.8rem;
+    }
+
+    /* Stack radio buttons for better visibility */
+    .radio-buttons-wrapper .form-check-inline {
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    /* Make audio controls smaller */
+    #composerCarousel audio {
+        height: 30px;
     }
 }
