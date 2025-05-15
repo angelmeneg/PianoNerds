@@ -11,15 +11,25 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/suggestions.css">
+    <!-- Print CSS -->
+    <link rel="stylesheet" href="styles/print.css" media="print">
+    <!-- Accessibility CSS -->
+    <link rel="stylesheet" href="styles/large-font.css">
 </head>
 
 
-<body>
+<body data-page-title="Your Suggestions">
+    <!-- Skip navigation link for accessibility -->
+    <a href="#content" class="skip-link">Skip to main content</a>
+    <!-- Header Section -->
+    <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
         <div class="container-fluid">
             <span class="navbar-brand mx-auto navbar-centered-title fw-bold fs-4">
-                Piano Nerds
+                <a href="index.html" class="text-decoration-none" style="color: inherit;">
+                    Piano Nerds
+                  </a>
             </span>
         </div>
     </nav>
@@ -39,9 +49,9 @@
         <!-- Row for center text -->
         <div class="row justify-content-center text-center mt-4 mt-md-5">
             <div class="col-12 col-md-10 col-lg-8">
-                <h5 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3"><strong>Welcome to Piano Nerds, a place for all
+                <h1 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3 fs-5"><strong>Welcome to Piano Nerds, a place for all
                         things
-                        piano!</strong></h5>
+                        piano!</strong></h1>
                 <p class="px-2">
                     Whether you're a passionate pianist, an eager learner, or just someone who loves the sound of the
                     keys, this
@@ -65,27 +75,35 @@
                 </div>
             </div>
         </div>
+
+        <!-- Skip navigation link moved to top of page -->
     </div>
 
     <!-- BackgroundImage -->
     <img src="media/Screenshot.png" alt="A piano" class="img-fluid background-img" />
-
+    </header>
 
 
     <!-- Main Content -->
     <div class="container-fluid overlap">
-        <div class="col-12 col-md-10 offset-0 offset-md-1 main-content">
+        <div class="col-12 col-md-10 offset-0 offset-md-1 main-content" data-page-title="Your Suggestions">
 
             <!-- Top Section: Greeting and Instructions -->
             <section class="top-section">
-                <h2>Hey fellow musicians,</h2>
+                <h2>Share Your Favorite Piano Pieces</h2>
+                <h3>Hey fellow musicians,</h3>
                 <p>
                     I'm always on the lookout for new pieces of music.<br>
                     Here you can <em>share your favorite ones.</em><br><br>
                     Help me expand my musical horizons!
                 </p>
                 <!-- Responsive image placeholder -->
-                <img src="media/coquette-hampter.gif" alt="A piano" class="img-fluid" />
+                <figure>
+                    <a href="media/coquette-hampter-hd.png" target="_blank">
+                    <img src="media/coquette-hampter.png" alt="Sad hamster meme" class="img-fluid" />
+                    </a>
+                    <figcaption class="visually-hidden">Cute hamster image</figcaption>
+                </figure>
             </section>
 
             <!-- Main Content -->
@@ -100,7 +118,9 @@
                                     placeholder="Enter piece name">
                             </div>
                             <fieldset class="mb-3">
-                                <legend class="fw-bold">Your rating (1 - 5):</legend>
+                                <legend class="fw-bold">
+                                    <h3 class="fs-6 m-0">Your rating (1 - 5):</h3>
+                                </legend>
                                 <div class="d-flex flex-wrap">
                                     <div class="form-check me-3">
                                         <input class="form-check-input" type="radio" name="rating" id="rating1"
@@ -134,7 +154,8 @@
                         <!-- Right Column: Relationship Textarea -->
                         <div class="col-12 col-md-5 form-outline mt-4 mt-md-0">
                             <div class="mb-3">
-                                <label for="relationship" class="form-label fw-bold">Your relationship with it:</label>
+                                <h3 class="fs-6 m-0 mb-2">Your relationship with it:</h3>
+                                <label for="relationship" class="form-label visually-hidden">Your relationship with the piece:</label>
                                 <textarea class="form-control" id="relationship" name="relationship" rows="7"
                                     placeholder="How did you discover it? Why does it matter to you?"></textarea>
                             </div>
@@ -143,10 +164,11 @@
                     <br> <!-- Extra Fun Checkbox -->
                     <div class="mb-3 p-4 mx-auto text-center"
                         style="background-color: #f9f9f9; border: 2px solid #ccc; border-radius: 8px; max-width: 400px;">
-                        <label class="fw-bold d-block mb-3" for="extraFun" style="font-size: 1.2rem; color: #333;">
+                        <h3 class="fw-bold d-block mb-3" style="font-size: 1.2rem; color: #333;">
                             Check for extra fun <br>
                             <span style="font-style: italic; color: #666;">(nothing will happen)</span>
-                        </label>
+                        </h3>
+                        <label class="visually-hidden" for="extraFun">Check for extra fun</label>
                         <div style="display: flex; justify-content: center;">
                             <input class="form-check-input" type="checkbox" name="extraFun" id="extraFun" value="Yes"
                                 style="transform: scale(1.8);">
@@ -161,9 +183,10 @@
                 </form>
 
                 <!-- Thank You Image Placeholder -->
-                <div class="text-center">
+                <figure class="text-center">
                     <img src="media/thank.png" alt="Thank you!" class="img-fluid" />
-                </div>
+                    <figcaption class="visually-hidden">Thank you message</figcaption>
+                </figure>
             </main>
         </div>
     </div>
@@ -171,6 +194,17 @@
 
 
 
+
+    <!-- Print Button (hidden in print view) -->
+    <div class="print-button-container">
+        <button class="btn btn-outline-secondary print-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+            </svg>
+            Print this page
+        </button>
+    </div>
 
     <!-- Footer -->
     <footer class="custom-footer">
@@ -200,6 +234,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+
+    <!-- Common Scripts -->
+    <script src="scripts/common.js"></script>
+    <script src="scripts/accessibility.js"></script>
 </body>
 
 </html>

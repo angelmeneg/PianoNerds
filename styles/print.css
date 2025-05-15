@@ -1,0 +1,397 @@
+/* Print-specific styles for Piano Nerds website */
+
+@media print {
+    /* General print settings */
+    body {
+        font-size: 10pt; /* Smaller font to fit more content */
+        line-height: 1.3;
+        background: #fff !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    /* Fix for the blank first page - move title into main content */
+    body::before {
+        display: none !important; /* Remove the body::before title that might cause blank page */
+    }
+
+    /* Add title to the main content instead */
+    .main-content::before {
+        content: "Piano Nerds - " attr(data-page-title);
+        display: block;
+        text-align: center;
+        font-size: 14pt;
+        font-weight: bold;
+        margin-bottom: 0.3cm;
+        border-bottom: 1px solid #000;
+        padding-bottom: 0.2cm;
+        page-break-after: avoid !important;
+    }
+
+    /* More compact title for GuessTheComposer */
+    [data-page-title="Guess The Composer"]::before {
+        font-size: 10pt !important;
+        margin-bottom: 0.1cm !important;
+        padding-bottom: 0.1cm !important;
+        border-bottom-width: 1px !important;
+    }
+
+    /* Hide elements not needed for printing */
+    nav,
+    .navbar,
+    .main-section,
+    .background-img,
+    footer,
+    .custom-footer,
+    button,
+    .btn,
+    audio,
+    video,
+    iframe,
+    .video-container,
+    #skip,
+    #checkScoreBtn,
+    #scoreBubble,
+    .print-button-container,
+    br, /* Remove extra line breaks to save space */
+    .quote, /* Remove decorative quotes */
+    .quote-author {
+        display: none !important;
+    }
+
+    /* Critical fix for blank first page - ensure main content starts at the top */
+    body {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .main-content {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Force content to start at the top of the page */
+    @page :first {
+        margin-top: 0.5cm;
+    }
+
+    /* Ensure content is visible and properly formatted */
+    .main-content {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        overflow: visible !important;
+        background-color: #fff !important;
+        float: none !important;
+        clear: both !important;
+    }
+
+    /* Reset overlap styles for printing */
+    .overlap {
+        transform: none !important;
+        margin: 0 !important;
+        position: static !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    /* Fix for columns that might cause blank pages */
+    .col-12, .col-md-10, [class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        offset: 0 !important;
+    }
+
+    /* Ultra-compact layout for GuessTheComposer page - fit on one page */
+    [data-page-title="Guess The Composer"] {
+        font-size: 8pt !important; /* Smaller font size */
+        line-height: 1.1 !important; /* Tighter line height */
+    }
+
+    [data-page-title="Guess The Composer"] article {
+        margin-bottom: 0.2cm !important;
+        padding: 0 !important;
+    }
+
+    [data-page-title="Guess The Composer"] .game-time-card,
+    [data-page-title="Guess The Composer"] .border,
+    [data-page-title="Guess The Composer"] .card,
+    [data-page-title="Guess The Composer"] .card-body {
+        padding: 0.1cm !important;
+        margin-bottom: 0.1cm !important;
+        border-width: 1px !important;
+    }
+
+    [data-page-title="Guess The Composer"] .row {
+        margin-bottom: 0.1cm !important;
+        padding: 0 !important;
+    }
+
+    [data-page-title="Guess The Composer"] p {
+        margin-bottom: 0.05cm !important;
+        margin-top: 0.05cm !important;
+    }
+
+    [data-page-title="Guess The Composer"] .mb-4,
+    [data-page-title="Guess The Composer"] .mb-3,
+    [data-page-title="Guess The Composer"] .my-4,
+    [data-page-title="Guess The Composer"] .my-3 {
+        margin-bottom: 0.1cm !important;
+        margin-top: 0.1cm !important;
+    }
+
+    /* Make headings smaller */
+    [data-page-title="Guess The Composer"] h1,
+    [data-page-title="Guess The Composer"] h2,
+    [data-page-title="Guess The Composer"] h3,
+    [data-page-title="Guess The Composer"] h4,
+    [data-page-title="Guess The Composer"] h5,
+    [data-page-title="Guess The Composer"] h6 {
+        margin-top: 0.1cm !important;
+        margin-bottom: 0.1cm !important;
+    }
+
+    [data-page-title="Guess The Composer"] h1 { font-size: 12pt !important; }
+    [data-page-title="Guess The Composer"] h2 { font-size: 11pt !important; }
+    [data-page-title="Guess The Composer"] h3 { font-size: 10pt !important; }
+    [data-page-title="Guess The Composer"] h4 { font-size: 9pt !important; }
+
+    /* Hide game badges to save space */
+    [data-page-title="Guess The Composer"] .game-time-badge {
+        display: none !important;
+    }
+
+    /* Make images tiny */
+    [data-page-title="Guess The Composer"] img {
+        max-width: 40% !important;
+        max-height: 40% !important;
+        margin: 0.1cm auto !important;
+    }
+
+    /* Reduce form element spacing */
+    [data-page-title="Guess The Composer"] .form-check {
+        margin-bottom: 0 !important;
+        padding-left: 1.2em !important;
+    }
+
+    /* Compact carousel */
+    [data-page-title="Guess The Composer"] .carousel-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    [data-page-title="Guess The Composer"] .carousel-item {
+        padding: 0 !important;
+    }
+
+    /* Improve table display for printing */
+    table {
+        border-collapse: collapse !important;
+        width: auto !important;
+        margin-bottom: 1cm !important;
+    }
+
+    th, td {
+        border: 1px solid #000 !important;
+        padding: 0.2cm !important;
+        text-align: left !important;
+    }
+
+    /* Ensure images print well and save space */
+    img {
+        max-width: 80% !important; /* Slightly smaller to save space */
+        max-height: 5cm !important; /* Reduced height to save paper */
+        page-break-inside: avoid !important;
+        display: block !important;
+        margin: 0.3cm auto !important; /* Center images with minimal margins */
+    }
+
+    /* Hide non-essential elements in GuessTheComposer */
+    [data-page-title="Guess The Composer"] .carousel-control-prev,
+    [data-page-title="Guess The Composer"] .carousel-control-next,
+    [data-page-title="Guess The Composer"] .carousel-indicators,
+    [data-page-title="Guess The Composer"] figure audio,
+    [data-page-title="Guess The Composer"] figcaption {
+        display: none !important;
+    }
+
+    /* Add audio placeholders */
+    [data-page-title="Guess The Composer"] figure::after {
+        content: "[Audio clip]";
+        font-style: italic;
+        font-size: 7pt !important;
+        display: block !important;
+        text-align: center !important;
+    }
+
+    /* Improve text readability for print */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+        margin-top: 1cm !important;
+    }
+
+    h1 {
+        font-size: 18pt !important;
+    }
+
+    h2 {
+        font-size: 16pt !important;
+    }
+
+    p, li {
+        page-break-inside: avoid !important;
+        orphans: 3 !important; /* Minimum number of lines at bottom of page */
+        widows: 3 !important;  /* Minimum number of lines at top of page */
+    }
+
+    /* Control page breaks more carefully */
+    article {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 1cm !important;
+    }
+
+    /* Avoid forced page breaks that might create blank pages */
+    * {
+        page-break-after: auto !important;
+        page-break-before: auto !important;
+    }
+
+    /* Ensure proper spacing */
+    .row {
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    [class*="col-"] {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 1cm !important;
+    }
+
+    /* Replace video content with a compact message */
+    .video-wrapper {
+        display: block !important;
+        height: auto !important;
+        max-height: none !important;
+        position: static !important;
+        margin: 0.2cm 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border-radius: 0 !important;
+    }
+
+    .video-wrapper::before {
+        content: "[Video available on website]";
+        font-style: italic;
+        font-size: 9pt !important;
+        display: block !important;
+        margin: 0 !important;
+        border: 1px dashed #000 !important;
+        padding: 0.1cm !important;
+        text-align: center !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Simplify insider notes */
+    .insider-note {
+        border: 1px solid #000 !important;
+        padding: 0.5cm !important;
+        margin: 1cm 0 !important;
+        box-shadow: none !important;
+        background: #fff !important;
+    }
+
+    /* Simplify horizontal rules */
+    .custom-hr {
+        border-top: 1px solid #000 !important;
+        height: 0 !important;
+        background: none !important;
+        box-shadow: none !important;
+        margin: 1cm 0 !important;
+        width: 100% !important;
+    }
+
+    /* Add URL after links */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    /* Don't add URL after image links or internal page links */
+    a[href^="#"]::after,
+    a:has(img)::after {
+        content: "";
+    }
+
+    /* Add page numbers and set minimal margins */
+    @page {
+        margin: 0.5cm; /* Reduced margins to save space */
+        size: auto;
+    }
+
+    /* Even smaller margins for GuessTheComposer */
+    @page {
+        margin: 0.3cm; /* Ultra-small margins */
+    }
+
+    /* Fix for Bootstrap container that might cause blank pages */
+    .container, .container-fluid {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Fix for flexbox issues in printing */
+    .d-flex, .flex-column, .align-items-center, .justify-content-center {
+        display: block !important;
+        flex-direction: unset !important;
+        align-items: unset !important;
+        justify-content: unset !important;
+    }
+
+    /* Optimize spacing for all pages */
+    h1, h2, h3 {
+        margin-top: 0.3cm !important;
+        margin-bottom: 0.2cm !important;
+    }
+
+    h1 { font-size: 14pt !important; }
+    h2 { font-size: 12pt !important; }
+    h3 { font-size: 11pt !important; }
+
+    p {
+        margin-bottom: 0.2cm !important;
+    }
+
+    .mb-4, .my-4 {
+        margin-bottom: 0.3cm !important;
+    }
+
+    .mt-4, .my-4 {
+        margin-top: 0.3cm !important;
+    }
+
+    .p-4 {
+        padding: 0.2cm !important;
+    }
+}

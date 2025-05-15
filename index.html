@@ -11,304 +11,396 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/common.css">
   <link rel="stylesheet" href="styles/index.css">
+  <!-- Print CSS -->
+  <link rel="stylesheet" href="styles/print.css" media="print">
+  <!-- Accessibility CSS -->
+  <link rel="stylesheet" href="styles/large-font.css">
 </head>
 
 
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
-    <div class="container-fluid">
-      <span class="navbar-brand mx-auto navbar-centered-title fw-bold fs-4">
-        Piano Nerds
-      </span>
-    </div>
-  </nav>
-
-  <!-- WelcomingBar -->
-  <div class="container-fluid main-section">
-    <!-- Row for top nav links -->
-    <div class="row">
-      <div class="col-auto">
-        <a href="index.html" class="btn btn-dark me-2 mb-2 active disabled" aria-current="page">My favorite pieces</a>
-        <a href="YourSuggestions.html" class="btn btn-outline-dark me-2 mb-2">Your suggestions</a>
-        <a href="GuessTheComposer.html" class="btn btn-outline-dark mb-2">Guess the Composer</a>
+<body data-page-title="My Favorite Pieces">
+  <!-- Skip navigation link for accessibility -->
+  <a href="#content" class="skip-link">Skip to main content</a>
+  <!-- Header Section -->
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+      <div class="container-fluid">
+        <span class="navbar-brand mx-auto navbar-centered-title fw-bold fs-4">
+          <a href="index.html" class="text-decoration-none" style="color: inherit;">
+            Piano Nerds
+          </a>
+        </span>
       </div>
-    </div>
+    </nav>
 
-    <!-- Row for center text -->
-    <div class="row justify-content-center text-center mt-4 mt-md-5">
-      <div class="col-12 col-md-10 col-lg-8">
-        <h5 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3"><strong>Welcome to Piano Nerds, a place for all things
-            piano!</strong></h5>
-        <p class="px-2">
-          Whether you're a passionate pianist, an eager learner, or just someone who loves the sound of the keys, this
-          site is for you.
-          Piano music has the power to inspire, heal, and transport us to different worlds. Here, you’ll find a
-          collection of my favorite pieces,
-          a space for you to share your own suggestions, and a fun interactive challenge where you can test your musical
-          ear.
-        </p>
-      </div>
-    </div>
-
-    <!-- Row for bottom quote -->
-    <div class="row">
-      <div class="col">
-        <div class="quote">
-          “Without music, life would be a mistake”
-          <div class="quote-author">— Friedrich Nietzsche</div>
+    <!-- WelcomingBar -->
+    <div class="container-fluid main-section">
+      <!-- Row for top nav links -->
+      <div class="row">
+        <div class="col-auto">
+          <a href="index.html" class="btn btn-dark me-2 mb-2 active disabled" aria-current="page">My favorite pieces</a>
+          <a href="YourSuggestions.html" class="btn btn-outline-dark me-2 mb-2">Your suggestions</a>
+          <a href="GuessTheComposer.html" class="btn btn-outline-dark mb-2">Guess the Composer</a>
         </div>
       </div>
+
+      <!-- Row for center text -->
+      <div class="row justify-content-center text-center mt-4 mt-md-5">
+        <div class="col-12 col-md-10 col-lg-8">
+          <h1 style="text-shadow: 2px 4px 8px rgba(0,0,0,0.15);" class="mb-3 fs-5"><strong>Welcome to Piano Nerds, a
+              place for
+              all things
+              piano!</strong></h1>
+          <p class="px-2">
+            Whether you're a passionate pianist, an eager learner, or just someone who loves the sound of the keys, this
+            site is for you.
+            Piano music has the power to inspire, heal, and transport us to different worlds. Here, you’ll find a
+            collection of my favorite pieces,
+            a space for you to share your own suggestions, and a fun interactive challenge where you can test your
+            musical
+            ear.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row for bottom quote -->
+      <div class="row">
+        <div class="col">
+          <div class="quote">
+            “Without music, life would be a mistake”
+            <div class="quote-author">— Friedrich Nietzsche</div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Skip navigation link moved to top of page -->
+
+
     </div>
+
+
+
+    <!-- BackgroundImage -->
+    <img src="media/Screenshot.png" alt="A piano" class="img-fluid background-img" />
+  </header>
+
+  <main id="content">
+    <!-- Main Content -->
+    <div class="container-fluid overlap">
+      <div class="col-12 col-md-10 offset-0 offset-md-1 main-content" data-page-title="My Favorite Pieces">
+        <!-- Ondine -->
+        <article>
+          <!-- Title -->
+          <h2 class="text-center mb-4">Ondine – <em>A Magical, Ethereal Masterpiece</em></h2>
+          <!-- Table -->
+          <div class="table-responsive-wrapper">
+            <div class="d-flex justify-content-center mb-5">
+              <table class="table table-bordered w-auto text-start">
+                <caption>
+                  <strong>Piece datasheet</strong>
+                  <details>
+                    <summary>Help</summary>
+                    <p>In this table you will find the following rows: Composer, Name of the Piece, Tonality, and Year
+                      of
+                      Composition.
+                    </p>
+                  </details>
+                </caption>
+                <tbody>
+                  <tr>
+                    <th><strong>Composer</strong></th>
+                    <td><em>Maurice Ravel</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Name of the Piece</strong></th>
+                    <td><em>Ondine</em> (from <em>Gaspard de la nuit, M. 55</em>)</td>
+                  </tr>
+                  <tr>
+                    <th><strong>Tonality</strong></th>
+                    <td><em>C♯ major</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Year of Composition</strong></th>
+                    <td><em>1908</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Two-column text section -->
+          <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-4 col-lg-3 offset-md-2 offset-lg-3">
+              <p class="fs-5 text-justify">
+                <strong><em>Maurice Ravel’s</em></strong> <em>Ondine</em> (1908) is a mesmerizing piano piece
+                inspired by
+                <strong><em>Aloysius Bertrand’s</em></strong> poem of the same name. It tells the story of a
+                <strong>water nymph</strong> who sings and dances, trying to lure a mortal into her enchanted
+                underwater world. Ravel’s <em>shimmering</em>, <em>flowing melodies</em> beautifully capture
+                the essence of water and the <strong>mystical allure</strong> of Ondine’s song. This piece, both
+                <em>delicate</em> and <em>haunting</em>, is a true gem of <strong>impressionistic piano
+                  music</strong>.
+              </p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6 col-lg-5">
+              <h6 class="fw-bold"><em>English Translation</em></h6>
+              <p class="fs-5 text-justify">
+                <strong>Listen! – Listen!</strong> – It is I, it is <em>Ondine</em> who brushes<br>
+                drops of water on the resonant panes of your windows<br>
+                lit by the gloomy rays of the moon;<br>
+                and here in gown of <em>watered silk</em>,<br>
+                the mistress of the chateau gazes from her balcony<br>
+                on the beautiful <strong>starry night</strong> and the beautiful <em>étoile</em>
+              </p>
+
+              <h6 class="fw-bold"><em>Original Poem (Excerpt by Aloysius Bertrand)</em></h6>
+              <p class="fs-5 text-justify" lang="fr">
+                <strong>Écoute! – Écoute!</strong> – C’est moi, c’est <em>Ondine</em> qui frôle<br>
+                de gouttes d’eau les losanges sonores<br>
+                des vitres éclairées par les mornes rayons<br>
+                de la lune;<br>
+                et voici, en robe de moire, la dame châtelaine<br>
+                qui contemple à son balcon <strong>la belle nuit étoilée</strong>
+              </p>
+            </div>
+          </div>
+
+          <div id="ravel-video" class="d-flex flex-column align-items-center p-4 bg-light rounded video-wrapper">
+            <p class="fst-italic text-center video-description">
+              Here, you can experience one of the finest interpretations of this enchanting piece:
+            </p>
+            <figure class="video-container">
+              <iframe src="https://www.youtube.com/embed/sUQoFOIn8dA?enablejsapi=1"
+                title="Maurice Ravel's Ondine performed by a pianist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy" class="youtube-video"></iframe>
+              <figcaption class="visually-hidden">Maurice Ravel's Ondine performance</figcaption>
+            </figure>
+            <div class="mt-3">
+              <a href="video-descriptions/ravel-ondine.html" class="btn btn-sm btn-outline-secondary">
+                View Full Video Description
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <hr class="custom-hr" />
+
+        <!-- Prelude -->
+        <article>
+          <!-- Title -->
+          <h2 class="text-center mb-4">Prelude in G Major, Op. 32, No. 5 – <em> A Lyrical, Dreamlike Gem</em></h2>
+          <!-- Table -->
+          <div class="table-responsive-wrapper">
+            <div class="d-flex justify-content-center mb-5">
+              <table class="table table-bordered w-auto text-start">
+                <caption>
+                  <strong>Piece datasheet</strong>
+                  <details>
+                    <summary>Help</summary>
+                    <p>In this table you will find the following rows: Composer, Name of the Piece, Tonality, and Year
+                      of
+                      Composition.
+                    </p>
+                  </details>
+                </caption>
+                <tbody>
+                  <tr>
+                    <th><strong>Composer</strong></th>
+                    <td><em>Sergei Rachmaninoff</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Name of the Piece</strong></th>
+                    <td><em>Prelude in G Major, Op. 32, No. 5</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Tonality</strong></th>
+                    <td><em>B minor</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Year of Composition</strong></th>
+                    <td><em>1853</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Text Column -->
+            <div class="col-sm-10 col-md-8 offset-sm-1 offset-md-2">
+              <p class="fs-4 text-justify">
+                <strong><em>Sergei Rachmaninoff’s Prelude in G Major, Op. 32, No. 5</em></strong> (1910) is
+                a <em>radiant</em> and <em>lyrical masterpiece</em>, full of <strong>delicate arpeggios</strong> and a
+                <em>flowing,
+                  dreamlike melody</em>. Unlike some of his darker and more dramatic works, this piece exudes
+                <strong>warmth</strong>,
+                <em>serenity</em>, and an almost <strong>improvisatory elegance</strong>. The <em>shimmering
+                  texture</em>
+                and
+                <strong>rich harmonies</strong> evoke the feeling of a <em>gentle, endless motion</em>—like
+                a <strong>quiet stream</strong>
+                or a <em>wistful memory taking flight</em>. It is a perfect example of
+                <strong>Rachmaninoff’s ability</strong> to blend
+                <em>technical brilliance</em> with <strong>deep emotion</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div id="rachmaninoff-video" class="d-flex flex-column align-items-center p-4 bg-light rounded video-wrapper">
+            <p class="fst-italic text-center video-description">
+              Again, here you can find the best performance of this piece (always in my opinion).
+            </p>
+            <figure class="video-container">
+              <video controls preload="metadata" poster="media/Sergei-Rachmaninoff.jpg.webp">
+                <source src="media/Vladimir_Sofronitsky_plays_Rachmaninov_Prelude_In_G_Major_Op.32_No.5.mp4"
+                  type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption class="visually-hidden">
+                Rachmaninoff's Prelude in G Major performance
+              </figcaption>
+            </figure>
+            <div class="mt-3 mb-3">
+              <a href="video-descriptions/rachmaninoff-prelude.html" class="btn btn-sm btn-outline-secondary">
+                View Full Video Description
+              </a>
+            </div>
+            <aside class="insider-note">
+              <p>
+                <strong>Little Insider:</strong> Did you know? The pianist in this performance is also a
+                Russian musician, just like Rachmaninoff himself! Some say that Russian pianists have a
+                secret formula for capturing the soul of his music—maybe it’s in their blood, or
+                maybe it’s just an absurd amount of tea and late-night practice sessions. Either
+                way, this performance brings an undeniably authentic touch to this exquisite
+                piece!
+              </p>
+            </aside>
+          </div>
+        </article>
+
+        <hr class="custom-hr" />
+
+        <!-- Ballade -->
+        <article>
+          <!-- Title -->
+          <h2 class="text-center mb-4">Ballade No. 2 in B Minor – <em>A Dramatic and Passionate Epic</em></h2>
+          <!-- Table -->
+          <div class="table-responsive-wrapper">
+            <div class="d-flex justify-content-center mb-5">
+              <table class="table table-bordered w-auto text-start">
+                <caption>
+                  <strong>Piece datasheet</strong>
+                  <details>
+                    <summary>Help</summary>
+                    <p>In this table you will find the following rows: Composer, Name of the Piece, Tonality, and Year
+                      of
+                      Composition.
+                    </p>
+                  </details>
+                </caption>
+                <tbody>
+                  <tr>
+                    <th><strong>Composer</strong></th>
+                    <td><em>Franz Liszt</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Name of the Piece</strong></th>
+                    <td><em>Ballade No. 2 in B Minor, S.171</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Tonality</strong></th>
+                    <td><em>C♯ major</em></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Year of Composition</strong></th>
+                    <td><em>1908</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Two-column text section -->
+          <div class="row">
+            <!-- Left Column -->
+            <div class="col-sm-10 col-md-5 col-lg-4 offset-sm-1 offset-md-1 offset-lg-2">
+              <p class="fs-5 text-justify">
+                <strong><em>Franz Liszt’s Ballade No. 2 in B Minor</em></strong> (1853) is a <em>fiery</em>
+                and <em>emotionally charged masterpiece</em>,
+                full of <strong>contrast</strong> and <strong>drama</strong>. From its <em>dark, brooding
+                  opening</em> to its <strong>explosive climaxes</strong>
+                and <em>lyrical, tender passages</em>, this piece takes listeners on a journey of
+                <strong>struggle</strong>, <em>passion</em>, and <strong>triumph</strong>.
+                Some believe it was inspired by the <strong>Greek myth of Hero and Leander</strong>,
+                reflecting <em>love</em>, <strong>fate</strong>, and <em>tragedy</em>
+                through its <strong>sweeping melodies</strong> and <em>powerful chords</em>. A true test of
+                a pianist’s skill, it demands both
+                <strong>technical mastery</strong> and <em>deep musical expression</em>.
+              </p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-sm-10 col-md-5 offset-sm-1 offset-md-0">
+              <p class="fs-5 text-justify">
+                Some believe <strong><em>Ballade No. 2</em></strong> was inspired by the tragic Greek myth
+                of <strong>Hero and Leander</strong>.
+                Leander, a young man, would swim across the <em>Hellespont</em> every night to be with his
+                beloved Hero, a priestess of
+                <strong>Aphrodite</strong>, who guided him with a lamp from her tower. One stormy night, the
+                winds extinguished her light,
+                and Leander lost his way, drowning in the dark waters. Overcome with grief, Hero threw
+                herself into the sea to join him in death.
+                <strong><em>Liszt’s music mirrors this story</em></strong>—turbulent waves of
+                <strong>passion</strong>, moments of <em>tender love</em>,
+                and the tragic, inevitable <strong>end</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div id="liszt-video" class="d-flex flex-column align-items-center p-4 bg-light rounded video-wrapper">
+            <p class="fst-italic text-center video-description">
+              Immerse yourself in one of the most captivating performances of this
+              breathtaking piece:
+            </p>
+            <figure class="video-container">
+              <iframe src="https://www.youtube.com/embed/PFFJ81OXnJI?enablejsapi=1"
+                title="Liszt's Ballade No. 2 in B Minor performed by a pianist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy" class="youtube-video"></iframe>
+              <figcaption class="visually-hidden">Liszt's Ballade No. 2 in B Minor performance</figcaption>
+            </figure>
+            <div class="mt-3">
+              <a href="video-descriptions/liszt-ballade.html" class="btn btn-sm btn-outline-secondary">
+                View Full Video Description
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  <!-- Print Button (hidden in print view) -->
+  <div class="print-button-container">
+    <button class="btn btn-outline-secondary print-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer"
+        viewBox="0 0 16 16">
+        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+        <path
+          d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
+      </svg>
+      Print this page
+    </button>
   </div>
-
-  <!-- BackgroundImage -->
-  <img src="media/Screenshot.png" alt="A piano" class="img-fluid background-img" />
-
-  <!-- Main Content -->
-  <div class="container-fluid overlap">
-    <div class="col-12 col-md-10 offset-0 offset-md-1 main-content">
-      <!-- Ondine -->
-      <div>
-        <!-- Title -->
-        <h2 class="text-center mb-4">Ondine – <em>A Magical, Ethereal Masterpiece</em></h2>
-        <!-- Table -->
-        <div class="table-responsive-wrapper">
-          <div class="d-flex justify-content-center mb-5">
-            <table class="table table-bordered w-auto text-start">
-              <tbody>
-                <tr>
-                  <th><strong>Composer</strong></th>
-                  <td><em>Maurice Ravel</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Name of the Piece</strong></th>
-                  <td><em>Ondine</em> (from <em>Gaspard de la nuit, M. 55</em>)</td>
-                </tr>
-                <tr>
-                  <th><strong>Tonality</strong></th>
-                  <td><em>C♯ major</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Year of Composition</strong></th>
-                  <td><em>1908</em></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Two-column text section -->
-        <div class="row">
-          <!-- Left Column -->
-          <div class="col-md-4 col-lg-3 offset-md-2 offset-lg-3">
-            <p class="fs-5 text-justify">
-              <strong><em>Maurice Ravel’s</em></strong> <em>Ondine</em> (1908) is a mesmerizing piano piece
-              inspired by
-              <strong><em>Aloysius Bertrand’s</em></strong> poem of the same name. It tells the story of a
-              <strong>water nymph</strong> who sings and dances, trying to lure a mortal into her enchanted
-              underwater world. Ravel’s <em>shimmering</em>, <em>flowing melodies</em> beautifully capture
-              the essence of water and the <strong>mystical allure</strong> of Ondine’s song. This piece, both
-              <em>delicate</em> and <em>haunting</em>, is a true gem of <strong>impressionistic piano music</strong>.
-            </p>
-          </div>
-
-          <!-- Right Column -->
-          <div class="col-md-6 col-lg-5">
-            <h6 class="fw-bold"><em>English Translation</em></h6>
-            <p class="fs-5 text-justify">
-              <strong>Listen! – Listen!</strong> – It is I, it is <em>Ondine</em> who brushes<br>
-              drops of water on the resonant panes of your windows<br>
-              lit by the gloomy rays of the moon;<br>
-              and here in gown of <em>watered silk</em>,<br>
-              the mistress of the chateau gazes from her balcony<br>
-              on the beautiful <strong>starry night</strong> and the beautiful <em>étoile</em>
-            </p>
-
-            <h6 class="fw-bold"><em>Original Poem (Excerpt by Aloysius Bertrand)</em></h6>
-            <p class="fs-5 text-justify">
-              <strong>Écoute! – Écoute!</strong> – C’est moi, c’est <em>Ondine</em> qui frôle<br>
-              de gouttes d’eau les losanges sonores<br>
-              des vitres éclairées par les mornes rayons<br>
-              de la lune;<br>
-              et voici, en robe de moire, la dame châtelaine<br>
-              qui contemple à son balcon <strong>la belle nuit étoilée</strong>
-            </p>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column align-items-center p-4 bg-light rounded video-wrapper">
-          <p class="fst-italic text-center video-description">
-            Here, you can experience one of the finest interpretations of this enchanting piece:
-          </p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/sUQoFOIn8dA?enablejsapi=1" title="Maurice Ravel's Ondine performed by a pianist"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy" class="youtube-video"></iframe>
-          </div>
-        </div>
-      </div>
-
-      <hr class="custom-hr" />
-
-      <!-- Prelude -->
-      <div>
-        <!-- Title -->
-        <h2 class="text-center mb-4">Prelude in G Major, Op. 32, No. 5 – <em> A Lyrical, Dreamlike Gem</em></h2>
-        <!-- Table -->
-        <div class="table-responsive-wrapper">
-          <div class="d-flex justify-content-center mb-5">
-            <table class="table table-bordered w-auto text-start">
-              <tbody>
-                <tr>
-                  <th><strong>Composer</strong></th>
-                  <td><em>Sergei Rachmaninoff</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Name of the Piece</strong></th>
-                  <td><em>Prelude in G Major, Op. 32, No. 5</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Tonality</strong></th>
-                  <td><em>B minor</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Year of Composition</strong></th>
-                  <td><em>1853</em></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- Text Column -->
-          <div class="col-sm-10 col-md-8 offset-sm-1 offset-md-2">
-            <p class="fs-4 text-justify">
-              <strong><em>Sergei Rachmaninoff’s Prelude in G Major, Op. 32, No. 5</em></strong> (1910) is
-              a <em>radiant</em> and <em>lyrical masterpiece</em>, full of <strong>delicate arpeggios</strong> and a
-              <em>flowing,
-                dreamlike melody</em>. Unlike some of his darker and more dramatic works, this piece exudes
-              <strong>warmth</strong>,
-              <em>serenity</em>, and an almost <strong>improvisatory elegance</strong>. The <em>shimmering texture</em>
-              and
-              <strong>rich harmonies</strong> evoke the feeling of a <em>gentle, endless motion</em>—like
-              a <strong>quiet stream</strong>
-              or a <em>wistful memory taking flight</em>. It is a perfect example of
-              <strong>Rachmaninoff’s ability</strong> to blend
-              <em>technical brilliance</em> with <strong>deep emotion</strong>.
-            </p>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column align-items-center p-4 bg-light rounded video-wrapper">
-          <p class="fst-italic text-center video-description">
-            Again, here you can find the best performance of this piece (always in my opinion).
-          </p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/XmZUQJ6jXz4?enablejsapi=1" title="Rachmaninoff's Prelude in G Major performed by a pianist"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy" class="youtube-video"></iframe>
-          </div>
-          <div class="insider-note">
-            <p>
-              <strong>Little Insider:</strong> Did you know? The pianist in this performance is also a
-              Russian musician, just like Rachmaninoff himself! Some say that Russian pianists have a
-              secret formula for capturing the soul of his music—maybe it’s in their blood, or
-              maybe it’s just an absurd amount of tea and late-night practice sessions. Either
-              way, this performance brings an undeniably authentic touch to this exquisite
-              piece!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <hr class="custom-hr" />
-
-      <!-- Ballade -->
-      <div>
-        <!-- Title -->
-        <h2 class="text-center mb-4">Ballade No. 2 in B Minor – <em>A Dramatic and Passionate Epic</em></h2>
-        <!-- Table -->
-        <div class="table-responsive-wrapper">
-          <div class="d-flex justify-content-center mb-5">
-            <table class="table table-bordered w-auto text-start">
-              <tbody>
-                <tr>
-                  <th><strong>Composer</strong></th>
-                  <td><em>Franz Liszt</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Name of the Piece</strong></th>
-                  <td><em>Ballade No. 2 in B Minor, S.171</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Tonality</strong></th>
-                  <td><em>C♯ major</em></td>
-                </tr>
-                <tr>
-                  <th><strong>Year of Composition</strong></th>
-                  <td><em>1908</em></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Two-column text section -->
-        <div class="row">
-          <!-- Left Column -->
-          <div class="col-sm-10 col-md-5 col-lg-4 offset-sm-1 offset-md-1 offset-lg-2">
-            <p class="fs-5 text-justify">
-              <strong><em>Franz Liszt’s Ballade No. 2 in B Minor</em></strong> (1853) is a <em>fiery</em>
-              and <em>emotionally charged masterpiece</em>,
-              full of <strong>contrast</strong> and <strong>drama</strong>. From its <em>dark, brooding
-                opening</em> to its <strong>explosive climaxes</strong>
-              and <em>lyrical, tender passages</em>, this piece takes listeners on a journey of
-              <strong>struggle</strong>, <em>passion</em>, and <strong>triumph</strong>.
-              Some believe it was inspired by the <strong>Greek myth of Hero and Leander</strong>,
-              reflecting <em>love</em>, <strong>fate</strong>, and <em>tragedy</em>
-              through its <strong>sweeping melodies</strong> and <em>powerful chords</em>. A true test of
-              a pianist’s skill, it demands both
-              <strong>technical mastery</strong> and <em>deep musical expression</em>.
-            </p>
-          </div>
-
-          <!-- Right Column -->
-          <div class="col-sm-10 col-md-5 offset-sm-1 offset-md-0">
-            <p class="fs-5 text-justify">
-              Some believe <strong><em>Ballade No. 2</em></strong> was inspired by the tragic Greek myth
-              of <strong>Hero and Leander</strong>.
-              Leander, a young man, would swim across the <em>Hellespont</em> every night to be with his
-              beloved Hero, a priestess of
-              <strong>Aphrodite</strong>, who guided him with a lamp from her tower. One stormy night, the
-              winds extinguished her light,
-              and Leander lost his way, drowning in the dark waters. Overcome with grief, Hero threw
-              herself into the sea to join him in death.
-              <strong><em>Liszt’s music mirrors this story</em></strong>—turbulent waves of
-              <strong>passion</strong>, moments of <em>tender love</em>,
-              and the tragic, inevitable <strong>end</strong>.
-            </p>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column align-items-center p-4 bg-light rounded video-wrapper">
-          <p class="fst-italic text-center video-description">
-            Immerse yourself in one of the most captivating performances of this
-            breathtaking piece:
-          </p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/PFFJ81OXnJI?enablejsapi=1" title="Liszt's Ballade No. 2 in B Minor performed by a pianist"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy" class="youtube-video"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
 
   <!-- Footer -->
   <footer class="custom-footer">
@@ -337,112 +429,10 @@
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
 
-  <!-- YouTube Video Pause Script -->
-  <script>
-    // Load YouTube API
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // Store YouTube players
-    var players = {};
-
-    // Function to check if an element is in viewport
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= -rect.height/2 &&
-        rect.left >= 0 &&
-        rect.bottom <= window.innerHeight + rect.height/2 &&
-        rect.right <= window.innerWidth
-      );
-    }
-
-    // Called when YouTube API is ready
-    function onYouTubeIframeAPIReady() {
-      // Get all YouTube iframes
-      const youtubeIframes = document.querySelectorAll('iframe[src*="youtube.com/embed"]');
-
-      youtubeIframes.forEach((iframe, index) => {
-        // Get the video ID from the src attribute
-        const src = iframe.src;
-        const match = src.match(/embed\/([^?]+)/);
-
-        if (match && match[1]) {
-          const videoId = match[1];
-          const playerId = 'youtube-player-' + index;
-
-          // Set an ID on the iframe for the YouTube API to target
-          iframe.id = playerId;
-
-          // Create a YouTube player for this iframe
-          players[playerId] = new YT.Player(playerId, {
-            events: {
-              'onStateChange': onPlayerStateChange
-            }
-          });
-        }
-      });
-
-      // Initial check for videos in viewport
-      checkVisibility();
-    }
-
-    // Handle player state changes
-    function onPlayerStateChange(event) {
-      // If a video starts playing, pause any other videos that might be playing
-      if (event.data === YT.PlayerState.PLAYING) {
-        const currentPlayerId = event.target.getIframe().id;
-
-        Object.keys(players).forEach(playerId => {
-          if (playerId !== currentPlayerId && players[playerId].getPlayerState() === YT.PlayerState.PLAYING) {
-            players[playerId].pauseVideo();
-          }
-        });
-      }
-    }
-
-    // Function to check visibility and pause/play videos accordingly
-    function checkVisibility() {
-      Object.keys(players).forEach(playerId => {
-        const iframe = document.getElementById(playerId);
-
-        if (iframe && players[playerId]) {
-          if (!isInViewport(iframe)) {
-            // If the player exists and is playing, pause it
-            if (players[playerId].getPlayerState && players[playerId].getPlayerState() === YT.PlayerState.PLAYING) {
-              players[playerId].pauseVideo();
-            }
-          }
-        }
-      });
-    }
-
-    // Throttle function to limit how often a function runs
-    function throttle(func, limit) {
-      let inThrottle;
-      return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-          func.apply(context, args);
-          inThrottle = true;
-          setTimeout(() => inThrottle = false, limit);
-        }
-      };
-    }
-
-    // Add scroll event listener with throttling
-    window.addEventListener('scroll', throttle(function() {
-      window.requestAnimationFrame(checkVisibility);
-    }, 250), { passive: true });
-
-    // Also check on window resize
-    window.addEventListener('resize', throttle(function() {
-      window.requestAnimationFrame(checkVisibility);
-    }, 250), { passive: true });
-  </script>
+  <!-- Common Scripts -->
+  <script src="scripts/common.js"></script>
+  <script src="scripts/accessibility.js"></script>
+  <script src="scripts/video-handlers.js"></script>
 </body>
 
 </html>

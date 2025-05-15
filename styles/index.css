@@ -1,4 +1,78 @@
 /* Specific styles for index.html */
 /* This file contains styles that are specific to the index page */
 
-/* Any additional styles specific to index.html would go here */
+/* Video container styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: auto;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+}
+
+/* Video wrapper styles */
+.video-wrapper {
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-description {
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* Insider note styling - specific to video sections */
+.insider-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 4rem auto;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.insider-note p {
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 100%;
+    color: #444;
+}
+
+/* Responsive adjustments for videos */
+@media (max-width: 768px) {
+    /* Adjust video container */
+    .video-container {
+        margin: 0 auto;
+    }
+
+    .insider-note {
+        padding: 1.5rem;
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .insider-note {
+        padding: 1rem;
+        margin: 1.5rem auto;
+    }
+}
